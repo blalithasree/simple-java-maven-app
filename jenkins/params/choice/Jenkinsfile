@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters {
-        choice(choices:["dev","prod,"stage"],description:"choose a choice",name:"choiceSelection)
+        choice(choices:['dev','prod','stage'], description:"choose a choice",name:"choiceSelection")
     }
     stages{
         stage("choice selection for env"){
