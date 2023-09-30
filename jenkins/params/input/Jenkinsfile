@@ -1,0 +1,14 @@
+pipeline{
+    agent any
+    parameters{
+        string(defaultValue:"dev", description:"which env to deploy? dev or test",name:"envdeploy")
+    }
+    stages{
+        stage('select build env'){
+            steps{
+                echo "please enter the env"
+                echo "you chose ${params.envdeploy}"
+            }
+        }
+    }
+}
