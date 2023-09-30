@@ -1,0 +1,13 @@
+pipeline{
+    agent any
+    parameters {
+        choice(choices:["dev","prod,"stage"],description:"choose a choice",name:"choiceSelection)
+    }
+    stages{
+        stage("choice selection for env"){
+            steps{
+                echo "your choice is : ${params.choiceSelection}"
+            }
+        }
+    }
+}
