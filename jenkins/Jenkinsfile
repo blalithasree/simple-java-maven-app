@@ -23,10 +23,11 @@ pipeline {
             }
         }
         stage("ifstatements"){
+            script{
                 if(env.BRANCH_NAME=='master'){
                     echo "hello from master"
                 }
-            
+            }
         }
     }
 }
