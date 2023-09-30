@@ -22,10 +22,12 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-        stage("ifstatements"){
-            script{
-                if(env.BRANCH_NAME=='master'){
-                    echo "hello from master"
+        stage("ifstatements") {
+            steps {
+                script{
+                    if(env.BRANCH_NAME=='master'){
+                        echo "hello from master"
+                    }
                 }
             }
         }
