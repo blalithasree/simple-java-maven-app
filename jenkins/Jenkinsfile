@@ -28,6 +28,10 @@ pipeline {
                     if(env.BRANCH_NAME=='master'){
                         echo "hello from master"
                     }
+                    else if(env.BRANCH_NAME=='feature1'){
+                        echo "from feature branch"
+                        
+                        }
                 }
             }
         }
