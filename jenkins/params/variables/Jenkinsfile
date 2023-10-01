@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    environment{
+        def myNameString="lalitha"
+        def myNumber = 10
+        def myBoolVariable= true
+    }
+    stages{
+        stage("Demo"){
+            steps{
+                echo "mynameString:${myNameString} running the job with build number ${env.BUILD_NUMBER}"
+
+            }
+        }
+    }
+}
