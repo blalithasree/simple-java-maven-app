@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Build another job with parameters"){
             steps{
-                build job:'parameterisedpipeline' , parameters:[[$class:'checkboxParameter',name:'choiceSelection',value:'${choiceSelection.value}']]
+                build wait: false, job: 'parameterisedpipeline', parameters: [string(name: 'choiceSelection', value: 'prod')]
             }
         }
     }
