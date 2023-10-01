@@ -12,5 +12,10 @@ pipeline{
 
             }
         }
+        stage("job from a job"){
+            steps{
+                build 'parameterisedpipeline'
+            }
+        }
     }
 }
